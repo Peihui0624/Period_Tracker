@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/my_image_view"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:src="@drawable/logo" />
 
     <TextView
@@ -41,7 +41,21 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_button"
         android:padding="12dp"
+        android:text="@string/button_text"
+        android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/link_to_page2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textColor="#ffffff"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:onClick="scrollToView"/>
+
+
 
 </LinearLayout>

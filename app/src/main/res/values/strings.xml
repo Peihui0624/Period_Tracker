@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Period Tracker</string>
+    <string name="button_text"><big>Let\'s Start!</big>\n<small>new member</small></string>
 </resources>
