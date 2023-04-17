@@ -34,7 +34,7 @@
         android:layout_marginTop="20dp"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/RegisterButton"
         android:layout_width="226dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -47,14 +47,15 @@
         android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/link_to_page2"
+        android:id="@+id/link_to_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign In"
-        android:textColor="#ffffff"
+        android:text="@string/messageWithLink"
+        android:textColor="#c0cbff"
+        android:textSize="18sp"
         android:autoLink="web"
-        android:linksClickable="true"
-        android:onClick="scrollToView"/>
+        android:clickable="true"
+        android:onClick="scrollToView" />
 
 
 
