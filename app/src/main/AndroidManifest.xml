@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PeriodTracker">
         <activity
-            android:name=".TestActivity"
-            android:exported="false" />
-        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity

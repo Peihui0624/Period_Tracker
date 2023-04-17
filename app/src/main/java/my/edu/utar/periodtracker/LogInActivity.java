@@ -1,37 +1,50 @@
 package my.edu.utar.periodtracker;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class LogInActivity extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword;
     Button buttonLogin;
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("users");
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+        db = new DatabaseHelper(this);
+
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonLogin = findViewById(R.id.buttonLogin);
+
+        editTextEmail.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
+            @Override
+            public void onClick(View v) {
+                editTextEmail.requestFocus();
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.showSoftInput(editTextEmail, InputMethodManager.SHOW_IMPLICIT);
+            }
+        });
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,48 +53,25 @@ public class LogInActivity extends AppCompatActivity {
                 String email = editTextEmail.getText().toString();
                 String password = editTextPassword.getText().toString();
 
-                myRef.orderByChild("email").equalTo(email).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
-                            User user = userSnapshot.getValue(User.class);
-                            if (user.password.equals(password)) {
-                                // Login successful
-                                Toast.makeText(LogInActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
-                            } else {
-                                // Login failed
-                                Toast.makeText(LogInActivity.this, "Invalid email or password", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }
+//                Toast.makeText(LogInActivity.this, "hi", Toast.LENGTH_SHORT).show();
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        // Handle error
-                        Toast.makeText(LogInActivity.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+                if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+                    Toast.makeText(getApplicationContext(), "Email and password are required", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                boolean isValid = db.checkUser(email, password);
+
+                if (isValid) {
+                    Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
+//                    Intent intent = new Intent(LogInActivity.this, TestActivity.class);
+//                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Invalid email or password", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
-
-//    private void loginUser() {
-//        String email = editTextEmail.getText().toString().trim();
-//        String password = editTextPassword.getText().toString().trim();
-//
-//        // Retrieve saved password from SharedPreferences
-//        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-//        String savedPassword = sharedPreferences.getString("password", "");
-//
-//        if (savedPassword.equals(password)) {
-//            // Passwords match, navigate to MainActivity
-//            Intent intent = new Intent(LogInActivity.this, TestActivity.class);
-//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//            startActivity(intent);
-//        } else {
-//            // Passwords do not match, display an error message
-//            editTextPassword.setError("Incorrect password");
-//            editTextPassword.requestFocus();
-//        }
-//    }
 }

@@ -7,7 +7,18 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:paddingTop="120dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     tools:context=".LogInActivity">
+
+    <TextView
+        android:id="@+id/DesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In."
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#E11584"/>
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -15,26 +26,34 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
         android:hint="@string/prompt_email"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@+id/editTextPassword"
         android:inputType="textEmailAddress"
+        android:background="@drawable/edittext_color"
+        android:textColorHint="#E11584"
+        android:padding="13dp"
         android:selectAllOnFocus="true" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:hint="@string/prompt_password"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
+        android:textColorHint="#E11584"
+        android:background="@drawable/edittext_color"
+        android:padding="13dp"
         android:selectAllOnFocus="true" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_button"
         android:text="@string/action_sign_in" />
 
 
