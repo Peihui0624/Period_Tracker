@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "UserStore.db";
+    private static final String DATABASE_NAME = "PeriodTrackerDB.db";
     private static final int DATABASE_VERSION = 1;
 
     // Table name and column names

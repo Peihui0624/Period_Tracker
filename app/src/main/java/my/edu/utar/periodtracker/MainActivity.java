@@ -14,20 +14,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn = findViewById(R.id.button2);
+        Button btn = findViewById(R.id.RegisterButton);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
     }
 
-//    public void scrollToView(View view) {
-//        Intent intent = new Intent(this, LogInActivity.class);
-//        intent.putExtra("scrollTo", R.id.scroll_to_here);
-//        startActivity(intent);
-//    }
+    public void clickToView(View view) {
+        Intent intent = new Intent(this, LogInActivity.class);
+        startActivity(intent);
+    }
 
 }

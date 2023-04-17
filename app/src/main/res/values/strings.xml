@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Period Tracker</string>
     <string name="button_text"><big>Let\'s Start!</big>\n<small>new member</small></string>
-    <string name="messageWithLink">Already have an account? <b>Sign In</b></string>
+    <string name="messageWithLink">Already have an account? <b><u>Sign In</u></b></string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>

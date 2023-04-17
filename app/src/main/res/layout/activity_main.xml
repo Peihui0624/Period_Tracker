@@ -55,7 +55,7 @@
         android:textSize="18sp"
         android:autoLink="web"
         android:clickable="true"
-        android:onClick="scrollToView" />
+        android:onClick="clickToView" />
 
 
 

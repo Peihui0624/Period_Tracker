@@ -95,24 +95,12 @@ public class RegisterActivity extends AppCompatActivity {
         if (isInserted) {
             Toast.makeText(getApplicationContext(), "User registered successfully", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(RegisterActivity.this, LogInActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
         } else {
             Toast.makeText(getApplicationContext(), "Registration failed", Toast.LENGTH_SHORT).show();
         }
-
-//        // Store user data in SharedPreferences
-//        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-//        SharedPreferences.Editor editor = sharedPreferences.edit();
-//        editor.putString("name", editTextName.getText().toString().trim());
-//        editor.putString("email", editTextEmail.getText().toString().trim());
-//        editor.putString("password", editTextPassword.getText().toString().trim());
-//        editor.apply();
-
-        // If registration is successful, navigate to LoginActivity
-//        Intent intent = new Intent(RegisterActivity.this, LogInActivity.class);
-//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//        startActivity(intent);
     }
 
 }
