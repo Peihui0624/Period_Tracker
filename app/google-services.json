@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "142563821178",
+    "project_id": "period-tracker-86937",
+    "storage_bucket": "period-tracker-86937.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142563821178:android:529dfe5664685149095dc3",
+        "android_client_info": {
+          "package_name": "my.edu.utar.periodtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142563821178-7niadk0phoj23p88ghe9gvr8k77t2och.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD033ZjJDGmJV1XFpGydHSPnXYwHGd_SJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142563821178-7niadk0phoj23p88ghe9gvr8k77t2och.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
