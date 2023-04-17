@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="139dp">
+
+        <TextView
+            android:id="@+id/textViewMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Text View"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/compactcalendar_view"
+            android:layout_width="fill_parent"
+            android:layout_height="350dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:compactCalendarBackgroundColor="#414043"
+            app:compactCalendarCurrentDayBackgroundColor="@android:color/transparent"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="#9d8189"
+            app:compactCalendarCurrentDayTextColor="#9d8189"
+            app:compactCalendarMultiEventIndicatorColor="#fff"
+            app:compactCalendarTargetHeight="400dp"
+            app:compactCalendarTextColor="#fff"
+            app:compactCalendarTextSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#40FFFFFF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Period day"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/textView_predict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Period Predict"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/textView_ovulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Ovulation"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="37dp" />
+
+        <TextView
+            android:id="@+id/textView_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/add"
+            android:drawableLeft="@drawable/blood"
+            android:drawablePadding="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"
+            android:text="TextView"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#40FFFFFF"
+            android:layout_below="@id/textView_start"/>
+
+        <TextView
+            android:id="@+id/textView_symptom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/add"
+            android:drawableLeft="@drawable/pain"
+            android:drawablePadding="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"
+            android:text="Symptom"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#40FFFFFF"
+            android:layout_below="@id/textView_symptom"/>
+
+        <TextView
+            android:id="@+id/textView_sleep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/add"
+            android:drawableLeft="@drawable/sleep"
+            android:drawablePadding="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"
+            android:text="Sleep Tracker"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#40FFFFFF"
+            android:layout_below="@id/textView_sleep"/>
+
+        <TextView
+            android:id="@+id/textView_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/add"
+            android:drawableLeft="@drawable/note"
+            android:drawablePadding="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"
+            android:text="Note"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
