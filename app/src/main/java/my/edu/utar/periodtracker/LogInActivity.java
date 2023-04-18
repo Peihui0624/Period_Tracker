@@ -53,8 +53,6 @@ public class LogInActivity extends AppCompatActivity {
                 String email = editTextEmail.getText().toString();
                 String password = editTextPassword.getText().toString();
 
-//                Toast.makeText(LogInActivity.this, "hi", Toast.LENGTH_SHORT).show();
-
                 if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                     Toast.makeText(getApplicationContext(), "Email and password are required", Toast.LENGTH_SHORT).show();
                     return;
@@ -64,7 +62,8 @@ public class LogInActivity extends AppCompatActivity {
 
                 if (isValid) {
                     Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LogInActivity.this, CalendarActivity.class);
+                    Intent intent = new Intent(LogInActivity.this, ProfileActivity.class);
+                    intent.putExtra("email", email);
                     startActivity(intent);
                     finish();
                 } else {

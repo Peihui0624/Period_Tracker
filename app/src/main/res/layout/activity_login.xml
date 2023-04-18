@@ -31,6 +31,7 @@
         android:inputType="textEmailAddress"
         android:background="@drawable/edittext_color"
         android:textColorHint="#E11584"
+        android:textColor="#E11584"
         android:padding="13dp"
         android:selectAllOnFocus="true" />
 
@@ -44,6 +45,7 @@
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:textColorHint="#E11584"
+        android:textColor="#E11584"
         android:background="@drawable/edittext_color"
         android:padding="13dp"
         android:selectAllOnFocus="true" />
