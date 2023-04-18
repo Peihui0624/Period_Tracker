@@ -25,6 +25,7 @@
             android:id="@+id/DesTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
             android:text="Profile."
             android:textSize="28sp"
             android:textStyle="bold"
@@ -81,5 +82,14 @@
         </TableRow>
 
     </TableLayout>
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="#E11584"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>
