@@ -12,7 +12,7 @@ import java.util.HashMap;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "PeriodTrackerDB.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Table name and column names
     public static final String TABLE_USERS = "users";

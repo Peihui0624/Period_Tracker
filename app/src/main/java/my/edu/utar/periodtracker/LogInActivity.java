@@ -72,13 +72,14 @@ public class LogInActivity extends AppCompatActivity {
 
                     if(db.checkNewUser(email)){
                         Intent intent = new Intent(LogInActivity.this, CalendarActivity.class);
+                        intent.putExtra("email", email);
                         startActivity(intent);
                     }
                     else{
                         Intent intent = new Intent(LogInActivity.this, NewUserActivity.class);
+                        intent.putExtra("email", email);
                         startActivity(intent);
                     }
-
                     finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "Invalid email or password", Toast.LENGTH_SHORT).show();

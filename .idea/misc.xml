@@ -16,6 +16,7 @@
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_reminder.xml" value="0.2269021739130435" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/PeriodTracker/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/drawable/border.xml" value="0.12395833333333334" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/drawable/edittext_color.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/drawable/ic_baseline_notification_important_24.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14635416666666667" />
@@ -23,11 +24,15 @@
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/drawable/rounded_curve.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/drawable/table_color.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_calendar.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_first_time.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_login.xml" value="0.1403985507246377" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_main.xml" value="0.17753623188405798" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_new_user.xml" value="0.264" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_note.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_profile.xml" value="0.264" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_register.xml" value="0.1403985507246377" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_summary.xml" value="0.1" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_symptom.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_try_frag_v2.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_try_fragment.xml" value="0.1" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/Period_Tracker/app/src/main/res/layout/activity_try_navigation.xml" value="0.13020833333333334" />

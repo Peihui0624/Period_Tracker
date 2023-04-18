@@ -16,23 +16,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-//        boolean isFirstTime = sharedPreferences.getBoolean("isFirstTime", true);
-//
-//        if (isFirstTime) {
-//            // Display your page
-//            setContentView(R.layout.activity_main);
-//
-//            // Set the value of isFirstTime to false
-//            SharedPreferences.Editor editor = sharedPreferences.edit();
-//            editor.putBoolean("isFirstTime", false);
-//            editor.apply();
-//        } else {
-//            // Display your main activity
-//            Intent intent = new Intent(this, CalendarActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean isFirstTime = sharedPreferences.getBoolean("isFirstTime", true);
+
+        if (isFirstTime) {
+            // Display your page
+            setContentView(R.layout.activity_main);
+
+            // Set the value of isFirstTime to false
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("isFirstTime", false);
+            editor.apply();
+        } else {
+            // Display your main activity
+            Intent intent = new Intent(this, CalendarActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         Button btn = findViewById(R.id.RegisterButton);
         btn.setOnClickListener(new View.OnClickListener() {

@@ -5,10 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="120dp"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp"
+    android:paddingTop="10dp"
     tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="120dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,13 +96,21 @@
 
     </TableLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <Button
         android:id="@+id/buttonLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Logout"
-        android:textColor="#E11584"
+        android:layout_marginTop="250dp"
         android:background="@drawable/rounded_button"
-        android:layout_marginTop="20dp"/>
+        android:text="Logout"
+        android:textColor="#E11584"/>
+
+    </LinearLayout>
+</LinearLayout>
 
 </LinearLayout>

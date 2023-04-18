@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -46,6 +47,16 @@ public class ProfileActivity extends AppCompatActivity {
         // Close database and cursor
         cursor.close();
         db.close();
+
+        ImageView backButton = findViewById(R.id.back_button);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
 
         // Find the logout button by ID
         logoutButton = findViewById(R.id.buttonLogout);

@@ -21,7 +21,8 @@
             android:paddingTop="40dp"
             android:paddingBottom="10dp"
             android:text="Choose Your Period Day"
-            android:textColor="#fff"
+            android:textColor="#E11584"
+            android:textStyle="bold"
             android:textSize="30sp" />
 
         <TextView
@@ -31,15 +32,16 @@
             android:gravity="center"
             android:paddingBottom="10dp"
             android:text="Let us have a better understanding of your period"
-            android:textColor="#fff"
+            android:textColor="#E11584"
             android:textSize="14sp" />
 
         <View
-            android:layout_width="370dp"
+            android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="#40FFFFFF"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
 
         <TextView
             android:id="@+id/textView3"
@@ -49,7 +51,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="30dp"
             android:text="When is your period start"
-            android:textColor="#fff"
+            android:textColor="#E11584"
             android:textSize="20sp" />
 
         <Button
@@ -60,7 +62,7 @@
             android:paddingLeft="20dp"
             android:text="Button"
             android:textSize="20sp"
-            android:textColor="#fff"
+            android:textColor="#E11584"
             style="?android:spinnerStyle"
 
             android:onClick="openDatePicker"/>
