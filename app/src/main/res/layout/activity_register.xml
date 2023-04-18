@@ -30,6 +30,7 @@
         android:hint="Name"
         android:background="@drawable/edittext_color"
         android:textColorHint="#E11584"
+        android:textColor="#E11584"
         android:padding="13dp"
         android:layout_marginTop="80dp"
         android:selectAllOnFocus="true" />
@@ -43,6 +44,7 @@
         android:inputType="text"
         android:hint="Email"
         android:textColorHint="#E11584"
+        android:textColor="#E11584"
         android:background="@drawable/edittext_color"
         android:padding="13dp"
         android:layout_marginTop="20dp"
@@ -56,6 +58,7 @@
         android:inputType="textPassword"
         android:hint="Password"
         android:textColorHint="#E11584"
+        android:textColor="#E11584"
         android:background="@drawable/edittext_color"
         android:padding="10dp"
         android:layout_marginTop="20dp"
@@ -66,6 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:textColor="#E11584"
         android:background="@drawable/rounded_button"
         android:layout_marginTop="20dp"/>
 

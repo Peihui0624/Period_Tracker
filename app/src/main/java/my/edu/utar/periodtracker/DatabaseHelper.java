@@ -15,11 +15,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     // Table name and column names
-    private static final String TABLE_USERS = "users";
-    private static final String COLUMN_ID = "_id";
-    private static final String COLUMN_USERNAME = "username";
-    private static final String COLUMN_EMAIL = "email";
-    private static final String COLUMN_PASSWORD = "password";
+    public static final String TABLE_USERS = "users";
+    public static final String COLUMN_ID = "_id";
+    public static final String COLUMN_USERNAME = "username";
+    public static final String COLUMN_EMAIL = "email";
+    public static final String COLUMN_PASSWORD = "password";
 
     //Period table name and column name
     private static final String TABLE_PERIOD = "period";

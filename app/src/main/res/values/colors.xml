@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="my_background_color">#414043</color>
     <color name="colorMagenta">#745964</color>
+
+
+    <color name="green">#0f0</color>
+    <color name="button_background_color">#925</color>
 </resources>
