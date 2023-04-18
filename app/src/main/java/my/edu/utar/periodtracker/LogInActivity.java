@@ -64,8 +64,21 @@ public class LogInActivity extends AppCompatActivity {
 
                 if (isValid) {
                     Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LogInActivity.this, CalendarActivity.class);
-                    startActivity(intent);
+
+                    SharedPreferences pref = getSharedPreferences("PeriodTrackerPreferences", MODE_PRIVATE);
+                    SharedPreferences.Editor prefEditor = pref.edit();
+                    prefEditor.putString("email", email);
+                    prefEditor.commit();
+
+                    if(db.checkNewUser(email)){
+                        Intent intent = new Intent(LogInActivity.this, CalendarActivity.class);
+                        startActivity(intent);
+                    }
+                    else{
+                        Intent intent = new Intent(LogInActivity.this, NewUserActivity.class);
+                        startActivity(intent);
+                    }
+
                     finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "Invalid email or password", Toast.LENGTH_SHORT).show();
