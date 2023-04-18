@@ -31,8 +31,9 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="Symptoms"
-            android:textColor="#fff"
-            android:textSize="20sp" />
+            android:textColor="#E11584"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -51,7 +52,8 @@
             android:padding="10dp"
             android:text="Cramp"
             android:textColor="#E11584"
-            android:textSize="15sp"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/cramp_layout"
