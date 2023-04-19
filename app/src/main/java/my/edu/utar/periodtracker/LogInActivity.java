@@ -53,6 +53,8 @@ public class LogInActivity extends AppCompatActivity {
                 String email = editTextEmail.getText().toString();
                 String password = editTextPassword.getText().toString();
 
+//                Toast.makeText(LogInActivity.this, "hi", Toast.LENGTH_SHORT).show();
+
                 if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                     Toast.makeText(getApplicationContext(), "Email and password are required", Toast.LENGTH_SHORT).show();
                     return;
@@ -62,9 +64,22 @@ public class LogInActivity extends AppCompatActivity {
 
                 if (isValid) {
                     Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LogInActivity.this, ProfileActivity.class);
-                    intent.putExtra("email", email);
-                    startActivity(intent);
+
+                    SharedPreferences pref = getSharedPreferences("PeriodTrackerPreferences", MODE_PRIVATE);
+                    SharedPreferences.Editor prefEditor = pref.edit();
+                    prefEditor.putString("email", email);
+                    prefEditor.commit();
+
+                    if(db.checkNewUser(email)){
+                        Intent intent = new Intent(LogInActivity.this, CalendarActivity.class);
+                        intent.putExtra("email", email);
+                        startActivity(intent);
+                    }
+                    else{
+                        Intent intent = new Intent(LogInActivity.this, NewUserActivity.class);
+                        intent.putExtra("email", email);
+                        startActivity(intent);
+                    }
                     finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "Invalid email or password", Toast.LENGTH_SHORT).show();

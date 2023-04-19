@@ -1,99 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".NoteActivity">
 
-    <!-- Scroll View -->
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
 
-        <!-- Linear Layout for Vertical Orientation -->
-        <LinearLayout
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content" >
 
-            <!-- Linear Layout for Horizontal Orientation -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <!-- Image View for "Go back to previous page" -->
-                <ImageView
-                    android:id="@+id/imageViewBack"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_baseline_arrow_back_ios_24" />
-
-                <!-- Image View for "Delete" -->
-                <ImageView
-                    android:id="@+id/imageViewDelete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/ic_baseline_delete_24" />
-
-                <!-- Image View for "Done" -->
-                <ImageView
-                    android:id="@+id/imageViewDone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/ic_baseline_done_24" />
-
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_back"/>
 
             <TextView
-                android:id="@+id/textViewDateTime"
+                android:id="@+id/textViewSymptom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:gravity="end"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="14sp"
-                android:textStyle="italic" />
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Note"
+                android:textColor="#fff"
+                android:textSize="20sp" />
 
-            <!-- EditText for Title -->
-            <EditText
-                android:id="@+id/editTextTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:hint="Title..."
-                android:minHeight="48dp"
-                android:textColor="@android:color/white" />
+        </RelativeLayout>
 
-            <!-- EditText for Note -->
-            <EditText
-                android:id="@+id/editTextNote"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:gravity="top"
-                android:hint="Type note here..."
-                android:inputType="textMultiLine"
-                android:minHeight="200dp"
-                android:scrollbars="vertical"
-                android:textColor="@android:color/white" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
-</RelativeLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

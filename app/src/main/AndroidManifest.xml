@@ -13,22 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PeriodTracker">
         <activity
-            android:name=".MainActivity"
-            android:exported="false"/>
-        <activity
-            android:name=".SummaryActivity"
+            android:name=".NoteActivity"
             android:exported="false" />
         <activity
-            android:name=".TryFragmentActivity"
+            android:name=".SummaryActivity"
             android:exported="false" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
+            android:name=".NewUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".Symptom"
             android:exported="false" />
         <activity
-            android:name=".NoteActivity"
+            android:name=".CalendarActivity"
             android:exported="false" />
         <activity
             android:name=".ReminderActivity"
@@ -40,7 +40,7 @@
             android:name=".LogInActivity"
             android:exported="false" />
         <activity
-            android:name=".CalendarActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,14 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".Symptom">
 
-
-
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="682dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="48dp">
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_back"/>
 
         <TextView
             android:id="@+id/textViewSymptom"
@@ -23,8 +31,19 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="Symptoms"
-            android:textColor="#fff"
-            android:textSize="20sp" />
+            android:textColor="#E11584"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:id="@+id/textViewSymptom1"
@@ -32,10 +51,12 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="Cramp"
-            android:textColor="#fff"
-            android:textSize="15sp"/>
+            android:textColor="#E11584"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <LinearLayout
+            android:id="@+id/cramp_layout"
             android:layout_width="match_parent"
             android:layout_height="104dp"
             android:orientation="horizontal"
@@ -60,7 +81,8 @@
             android:layout_width="match_parent"
             android:layout_height="104dp"
             android:orientation="horizontal"
-            android:background="@drawable/rounded_curve"></LinearLayout>
+            android:background="@drawable/rounded_curve">
+        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
@@ -79,6 +101,11 @@
             android:layout_width="match_parent"
             android:layout_height="103dp"
             android:orientation="horizontal"
-            android:background="@drawable/rounded_curve"></LinearLayout>
+            android:background="@drawable/rounded_curve">
+        </LinearLayout>
     </LinearLayout>
+
+    </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>

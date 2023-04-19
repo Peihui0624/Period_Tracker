@@ -94,8 +94,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         if (isInserted) {
             Toast.makeText(getApplicationContext(), "User registered successfully", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(RegisterActivity.this, CalendarActivity.class);
+            Intent intent = new Intent(RegisterActivity.this, LogInActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.putExtra("email", email);
             startActivity(intent);
             finish();
         } else {
