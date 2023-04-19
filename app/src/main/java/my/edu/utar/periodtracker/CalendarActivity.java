@@ -111,7 +111,8 @@ public class CalendarActivity extends AppCompatActivity {
         txNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(CalendarActivity.this, NoteActivity.class);
+                startActivity(intent);
             }
         });
 
