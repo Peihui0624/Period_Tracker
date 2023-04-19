@@ -1,11 +1,10 @@
 package my.edu.utar.periodtracker;
 
-import com.google.firebase.Timestamp;
+
 
 public class NoteActivity2 {
     String title;
     String note;
-    Timestamp timestamp;
 
     public NoteActivity2() {
     }
@@ -24,13 +23,5 @@ public class NoteActivity2 {
 
     public void setNote(String note) {
         this.note = note;
-    }
-
-    public Timestamp getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
     }
 }
